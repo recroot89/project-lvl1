@@ -1,19 +1,23 @@
 {
   "name": "brain-games-recroot89",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "[![Code Climate](https://codeclimate.com/github/hexlet-boilerplates/nodejs-package/badges/gpa.svg)](https://codeclimate.com/github/hexlet-boilerplates/nodejs-package) [![Issue Count](https://codeclimate.com/github/hexlet-boilerplates/nodejs-package/badges/issue_count.svg)](https://codeclimate.com/github/hexlet-boilerplates/nodejs-package) [![Build Status](https://travis-ci.org/hexlet-boilerplates/nodejs-package.svg?branch=master)](https://travis-ci.org/hexlet-boilerplates/nodejs-package)",
   "main": "index.js",
   "scripts": {
     "babel-node": "babel-node",
     "eslint": "eslint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublish": "npm run build"
   },
   "bin": {
-    "brain-even": "src/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "readline-sync": "^1.4.7"
+  },
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "*",
