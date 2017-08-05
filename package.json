@@ -1,0 +1,22 @@
+{
+  "name": "brain-games-recroot89",
+  "version": "1.0.1",
+  "description": "[![Code Climate](https://codeclimate.com/github/hexlet-boilerplates/nodejs-package/badges/gpa.svg)](https://codeclimate.com/github/hexlet-boilerplates/nodejs-package) [![Issue Count](https://codeclimate.com/github/hexlet-boilerplates/nodejs-package/badges/issue_count.svg)](https://codeclimate.com/github/hexlet-boilerplates/nodejs-package) [![Build Status](https://travis-ci.org/hexlet-boilerplates/nodejs-package.svg?branch=master)](https://travis-ci.org/hexlet-boilerplates/nodejs-package)",
+  "main": "index.js",
+  "scripts": {
+  	"babel-node": "babel-node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "brain-even": "src/bin/brain-even.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-preset-env": "*",
+    "babel-preset-stage-0": "*"
+  }
+}
