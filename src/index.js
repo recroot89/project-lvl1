@@ -25,4 +25,4 @@ export default (gameQuestion, correctAnswer) => {
   } else {
     console.log(`Let's try again, ${actual}!`);
   }
-}
+};
