@@ -1,6 +1,6 @@
 {
   "name": "brain-games-recroot89",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "[![Code Climate](https://codeclimate.com/github/hexlet-boilerplates/nodejs-package/badges/gpa.svg)](https://codeclimate.com/github/hexlet-boilerplates/nodejs-package) [![Issue Count](https://codeclimate.com/github/hexlet-boilerplates/nodejs-package/badges/issue_count.svg)](https://codeclimate.com/github/hexlet-boilerplates/nodejs-package) [![Build Status](https://travis-ci.org/hexlet-boilerplates/nodejs-package.svg?branch=master)](https://travis-ci.org/hexlet-boilerplates/nodejs-package)",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,11 @@
     "prepublish": "npm run build"
   },
   "bin": {
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js",
+    "brain-gcd": "dist/bin/brain-gcd.js",
+    "brain-balance": "dist/bin/brain-balance.js",
+    "brain-progression": "dist/bin/brain-progression.js"
   },
   "author": "",
   "license": "ISC",

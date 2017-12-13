@@ -1,22 +1,24 @@
 #!/usr/bin/node
 import readlineSync from 'readline-sync';
 
-export default (gameQuestion, correctAnswer) => {
+export default (mission, getQuestion, getCorrectAnswer, questionToString) => {
   console.log('Welcome to brain games!');
-  console.log('Answer "yes" if number odd otherwise answer "no".');
+  console.log(mission);
   const actual = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${actual}!`);
 
   let acc = 0;
   while (acc < 3) {
-    const question = gameQuestion()();
-    console.log(`Question: ${question}`);
+    const question = getQuestion();
+    const stringQuestion = questionToString(question);
+    console.log(`Question: ${stringQuestion}`);
+    const answer = getCorrectAnswer(question);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (userAnswer === correctAnswer(question)()) {
+    if (userAnswer === String(answer)) {
       console.log('Correct!');
       acc += 1;
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer(question)()}'.`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
       break;
     }
   }
